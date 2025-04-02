@@ -51,7 +51,7 @@ import java.util.logging.Logger;
 public class ServerWithoutThreads {
 
 //    private static org.postgresql.Driver initializeDriver = new org.postgresql.Driver(); // initialize driver
-    private static final boolean SHOULD_LOG = false;
+    private static final boolean SHOULD_LOG = true;
 
     public static void main(String[] args) throws IOException {
         int port = 8080;
@@ -87,8 +87,8 @@ public class ServerWithoutThreads {
                 // Process the request and generate a response (simplified for demonstration)
 //                Thread.sleep(100); // save data to database
                 String response = "HTTP/1.0 200 OK\r\n\r\n"
-                        //                        + taskWithDB();
-                        + taskWithSleep();
+                        + taskWithDB();
+//                        + taskWithSleep();
 
                 // Send the response to the client
                 OutputStream out = clientSocket.getOutputStream();

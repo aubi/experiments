@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Download Demo</title>
+    </h:head>
+    <h:body>
+        <h1>Download Demo</h1>
+        <h:form id="download-form">
+            <p>Servlet: <a href="download">download</a></p>
+            <p>Faces: <h:commandButton value="Download" action="#{dlBean.downloadFile}" /></p>
+            <p>PrimeFaces: 
+                <p:commandButton value="Download" ajax="false">
+                    <p:fileDownload value="#{dlBean.facesFile}" />
+                </p:commandButton>
+            </p>
+            <p>REST: <a href="rest/download">download</a></p>
+            <p><img src="download" alt="Payara logo" style="background-color: black;"/></p>
+        </h:form>
+    </h:body>
+</html>
